@@ -18,7 +18,6 @@ body {
     padding: 0 20px;
     position: relative;
     
-    
 }
 
 .logo {
@@ -42,8 +41,10 @@ body {
     appearance: none;
     padding: 8px;
     cursor: pointer;
-    z-index: 999;
-    margin-top: 33px;
+    z-index: 99999999;
+    /* margin-top: 33px; */
+    padding: 33px;
+    top: 0;
 }
 
 .hamburger-menu__bar {
@@ -55,6 +56,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     transition: .5s;
+}
+
+.hamburger-menu--open .hamburger-menu__bar {
+    background: white
 }
 
 .hamburger-menu__bar:first-child {
@@ -89,7 +94,7 @@ body {
     display: none;
     background: #242424;
     position: fixed;
-    top: 50px;
+    top: 0;
     width: 100%;
     z-index: 9999;
     right: 0;
@@ -149,7 +154,7 @@ body {
     
     .slide-text h2 {
         font-size: 80px; /* テキストのサイズを設定 */
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
     }
 
 
@@ -265,7 +270,7 @@ section .content {
 
 body {
     background-color: #fafafa;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
@@ -486,4 +491,53 @@ footer {
 
 .slideshow img {
     height: 150px !important;
+}
+
+@media only screen and (max-width: 390px) {
+    body {
+        overflow-x: hidden!important;
+    }
+
+    .slideshow {
+        display: none;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+    .button-wrapper {
+        width: auto;
+    }
+
+    .app-item {
+        width: 170px!important;
+        overflow: hidden;
+    }  
+    
+    .app-item img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .app-item,
+    .app-item * {
+        margin: 0!important;
+        box-sizing: border-box!important;
+    }
+
+    #section2::after {
+        width: 180px;
+        height: 180px;
+        left: 57%;
+    }
+
+    #mango img {
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        margin: 0!important;
+        left: unset;
+    }
+
 }
